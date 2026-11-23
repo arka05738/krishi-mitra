@@ -14,9 +14,9 @@ from pathlib import Path
 from typing import Union, Optional, Dict, Any, List, Tuple
 from PIL import Image
 
-# Enforce strict offline mode for Hugging Face Hub and Transformers
-os.environ["HF_HUB_OFFLINE"] = "1"
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
+# Enforce strict offline mode for Hugging Face Hub and Transformers if not configured
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 import numpy as np
 

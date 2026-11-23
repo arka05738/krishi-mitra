@@ -9,9 +9,9 @@ from functools import lru_cache
 from typing import List
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-# Enforce strict offline execution before importing any machine learning libraries
-os.environ["HF_HUB_OFFLINE"] = "1"
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
+# Enforce strict offline execution before importing any machine learning libraries if not configured
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 # Directory layout anchors
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent

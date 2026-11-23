@@ -10,9 +10,9 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from pydantic import BaseModel, Field
 
-# Ensure offline operation
-os.environ["HF_HUB_OFFLINE"] = "1"
-os.environ["TRANSFORMERS_OFFLINE"] = "1"
+# Ensure offline operation if not configured
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 
 class KnowledgeChunk(BaseModel):
