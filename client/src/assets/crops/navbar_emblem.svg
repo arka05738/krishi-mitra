@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDF78" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+    <linearGradient id="navNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E62" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#navNavy)" stroke="url(#navGold)" stroke-width="2"/>
+  <!-- Two crossing golden sheaves and central sprouting leaf -->
+  <path d="M24 38 C24 26 24 16 24 10" stroke="url(#navGold)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M24 24 C18 20 16 14 24 12" fill="url(#navGold)"/>
+  <path d="M24 24 C30 20 32 14 24 12" fill="url(#navGold)"/>
+  <path d="M24 32 C17 28 15 22 24 20" fill="url(#navGold)"/>
+  <path d="M24 32 C31 28 33 22 24 20" fill="url(#navGold)"/>
+  <circle cx="24" cy="9" r="2.5" fill="#FFFFFF"/>
+</svg>

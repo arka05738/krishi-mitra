@@ -1,0 +1,12 @@
+{
+  "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+  "model_family": "Llama 3.2",
+  "parameters": "1.23 Billion",
+  "quantization": "int4_weight_only",
+  "format": "GGUF / PTE",
+  "model_file": "/home/abhiroop/Desktop/ARM/llama/models/Llama-3.2-1B-Instruct/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+  "target_hardware": "Raspberry Pi 5 (Arm Cortex-A76 @ 2.4GHz, 4GB RAM)",
+  "memory_required_mb": 1150,
+  "offline": true,
+  "challenge_compliance": "Arm Bharat AI-SoC Reference Architecture"
+}

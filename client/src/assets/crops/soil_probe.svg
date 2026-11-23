@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="probeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+    <linearGradient id="probeBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E62" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#probeBlue)" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M28 16 L36 16 L36 24 L44 38 C46 42 43 47 38 47 L26 47 C21 47 18 42 20 38 L28 24 Z" fill="#1E293B" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M23 37 L41 37 L43 41 C44 44 42 46 38 46 L26 46 C22 46 20 44 21 41 Z" fill="url(#probeGold)"/>
+  <line x1="30" y1="28" x2="34" y2="28" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+  <line x1="29" y1="32" x2="35" y2="32" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+  <path d="M42 14 L49 21 L35 35 L32 32 Z" fill="#FEF08A" stroke="#CA8A04" stroke-width="1"/>
+  <circle cx="51" cy="12" r="2.5" fill="#D4AF37" stroke="#FFFFFF" stroke-width="1"/>
+</svg>

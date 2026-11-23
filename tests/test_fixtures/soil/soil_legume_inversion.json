@@ -1,0 +1,16 @@
+{
+  "crop": "chickpea",
+  "target_yield": 1.5,
+  "ph": 7.2,
+  "electrical_conductivity": 0.35,
+  "organic_carbon": 0.52,
+  "nitrogen": 20.0,
+  "phosphorus": 50.0,
+  "potassium": 20.0,
+  "area_acres": 1.0,
+  "zinc": 0.6,
+  "iron": 8.0,
+  "copper": 0.9,
+  "manganese": 6.0,
+  "boron": 0.5
+}

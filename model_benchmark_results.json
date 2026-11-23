@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-11-18 16:03:19",
+  "hardware": "Raspberry Pi 5 (Quad-Core Cortex-A76, 4GB RAM)",
+  "model_1_disease": [
+    {
+      "file": "disease_apple_scab.jpg",
+      "expected": "Apple - Apple Scab",
+      "vit_predicted_crop": "Tomato",
+      "vit_predicted_condition": "Healthy Leaf Condition",
+      "vit_confidence_pct": 5.7,
+      "vit_latency_ms": 2929.2,
+      "efficientnet_predicted": "Corn_(maize)___Common_rust_",
+      "efficientnet_confidence_pct": 3.7,
+      "efficientnet_latency_ms": 476.4,
+      "severity": "None"
+    },
+    {
+      "file": "disease_potato_late_blight.jpg",
+      "expected": "Potato - Late Blight",
+      "vit_predicted_crop": "Tomato",
+      "vit_predicted_condition": "Late Blight (Water-Soaked Dark Rot)",
+      "vit_confidence_pct": 86.6,
+      "vit_latency_ms": 2714.2,
+      "efficientnet_predicted": "Tomato___Late_blight",
+      "efficientnet_confidence_pct": 6.5,
+      "efficientnet_latency_ms": 350.0,
+      "severity": "Critical"
+    },
+    {
+      "file": "disease_tomato_early_blight.jpg",
+      "expected": "Tomato - Early Blight",
+      "vit_predicted_crop": "Tomato",
+      "vit_predicted_condition": "Late Blight (Water-Soaked Dark Rot)",
+      "vit_confidence_pct": 17.0,
+      "vit_latency_ms": 6834.1,
+      "efficientnet_predicted": "Strawberry___Leaf_scorch",
+      "efficientnet_confidence_pct": 6.8,
+      "efficientnet_latency_ms": 383.6,
+      "severity": "Critical"
+    },
+    {
+      "file": "disease_corn_rust.jpg",
+      "expected": "Corn - Common Rust",
+      "vit_predicted_crop": "Corn (Maize)",
+      "vit_predicted_condition": "Northern Corn Leaf Blight (Cigar-Shaped Lesions)",
+      "vit_confidence_pct": 56.1,
+      "vit_latency_ms": 2187.4,
+      "efficientnet_predicted": "Strawberry___Leaf_scorch",
+      "efficientnet_confidence_pct": 4.7,
+      "efficientnet_latency_ms": 319.5,
+      "severity": "Critical"
+    },
+    {
+      "file": "disease_grape_black_rot.jpg",
+      "expected": "Grape - Black Rot",
+      "vit_predicted_crop": "Bell Pepper (Capsicum)",
+      "vit_predicted_condition": "Healthy Leaf Condition",
+      "vit_confidence_pct": 12.8,
+      "vit_latency_ms": 2981.3,
+      "efficientnet_predicted": "Cherry_(including_sour)___healthy",
+      "efficientnet_confidence_pct": 3.7,
+      "efficientnet_latency_ms": 304.0,
+      "severity": "None"
+    },
+    {
+      "file": "tomato_infected.jpeg",
+      "expected": "Tomato - Late Blight",
+      "vit_predicted_crop": "Tomato",
+      "vit_predicted_condition": "Late Blight (Water-Soaked Dark Rot)",
+      "vit_confidence_pct": 23.7,
+      "vit_latency_ms": 2505.7,
+      "efficientnet_predicted": "Strawberry___Leaf_scorch",
+      "efficientnet_confidence_pct": 4.6,
+      "efficientnet_latency_ms": 303.4,
+      "severity": "Critical"
+    },
+    {
+      "file": "tomato_healthy.jpg",
+      "expected": "Tomato - Healthy",
+      "vit_predicted_crop": "Bell Pepper (Capsicum)",
+      "vit_predicted_condition": "Healthy Leaf Condition",
+      "vit_confidence_pct": 18.4,
+      "vit_latency_ms": 2211.5,
+      "efficientnet_predicted": "Orange___Haunglongbing_(Citrus_greening)",
+      "efficientnet_confidence_pct": 4.7,
+      "efficientnet_latency_ms": 337.5,
+      "severity": "None"
+    },
+    {
+      "file": "sunflower_healthy.jpg",
+      "expected": "Sunflower - Healthy",
+      "vit_predicted_crop": "Sunflower",
+      "vit_predicted_condition": "Gray Mold (Botrytis Head & Leaf Rot)",
+      "vit_confidence_pct": 91.5,
+      "vit_latency_ms": 6493.5,
+      "efficientnet_predicted": "Grape___healthy",
+      "efficientnet_confidence_pct": 4.8,
+      "efficientnet_latency_ms": 600.6,
+      "severity": "Critical"
+    }
+  ],
+  "model_2_pest_classification": [
+    {
+      "file": "test_aphid_field.jpg",
+      "expected_pest": "aphids",
+      "predicted_pest": "Miridae",
+      "confidence_pct": 1.9,
+      "top_3_candidates": [
+        "Miridae (1.9%)",
+        "Cicadellidae (1.1%)",
+        "alfalfa seed chalcid (1.0%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 2502.9
+    },
+    {
+      "file": "pest_armyworm.jpg",
+      "expected_pest": "army worm",
+      "predicted_pest": "Prodenia litura",
+      "confidence_pct": 1.2,
+      "top_3_candidates": [
+        "Prodenia litura (1.2%)",
+        "beet army worm (1.1%)",
+        "flax budworm (1.1%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 444.7
+    },
+    {
+      "file": "pest_rice_leaf_roller.jpg",
+      "expected_pest": "rice leaf roller",
+      "predicted_pest": "rice leaf roller",
+      "confidence_pct": 2.5,
+      "top_3_candidates": [
+        "rice leaf roller (2.5%)",
+        "corn borer (1.0%)",
+        "Lycorma delicatula (1.0%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 303.1
+    },
+    {
+      "file": "pest_brown_planthopper.jpg",
+      "expected_pest": "brown plant hopper",
+      "predicted_pest": "Cicadellidae",
+      "confidence_pct": 1.3,
+      "top_3_candidates": [
+        "Cicadellidae (1.3%)",
+        "brown plant hopper (1.2%)",
+        "Miridae (1.1%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 363.4
+    },
+    {
+      "file": "pest_corn_borer.jpg",
+      "expected_pest": "corn borer",
+      "predicted_pest": "Lycorma delicatula",
+      "confidence_pct": 1.6,
+      "top_3_candidates": [
+        "Lycorma delicatula (1.6%)",
+        "Adristyrannus (1.1%)",
+        "rice shell pest (1.1%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 338.9
+    },
+    {
+      "file": "pest_mole_cricket.jpg",
+      "expected_pest": "mole cricket",
+      "predicted_pest": "mole cricket",
+      "confidence_pct": 1.6,
+      "top_3_candidates": [
+        "mole cricket (1.6%)",
+        "Miridae (1.1%)",
+        "Limacodidae (1.1%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 643.3
+    },
+    {
+      "file": "pest_red_spider.jpg",
+      "expected_pest": "red spider",
+      "predicted_pest": "Panonchus citri McGregor",
+      "confidence_pct": 2.1,
+      "top_3_candidates": [
+        "Panonchus citri McGregor (2.1%)",
+        "red spider (1.1%)",
+        "Miridae (1.0%)"
+      ],
+      "severity": "Moderate",
+      "latency_ms": 341.1
+    }
+  ],
+  "model_3_pest_detection": [
+    {
+      "file": "test_aphid_field.jpg",
+      "expected_pest": "aphids",
+      "total_detected": 1,
+      "detections": [
+        "aphids (15.3%, box=[418.2, 270.7, 597.5, 471.4])"
+      ],
+      "latency_ms": 1603.0,
+      "status": "detected"
+    },
+    {
+      "file": "pest_armyworm.jpg",
+      "expected_pest": "army worm",
+      "total_detected": 2,
+      "detections": [
+        "beet army worm (35.5%, box=[428.8, 483.8, 1759.0, 1215.6])",
+        "cabbage army worm (34.4%, box=[424.9, 487.4, 1755.3, 1215.9])"
+      ],
+      "latency_ms": 475.7,
+      "status": "detected"
+    },
+    {
+      "file": "pest_rice_leaf_roller.jpg",
+      "expected_pest": "rice leaf roller",
+      "total_detected": 1,
+      "detections": [
+        "rice leaf roller (87.7%, box=[48.9, 172.1, 711.0, 691.3])"
+      ],
+      "latency_ms": 778.5,
+      "status": "detected"
+    },
+    {
+      "file": "pest_brown_planthopper.jpg",
+      "expected_pest": "brown plant hopper",
+      "total_detected": 1,
+      "detections": [
+        "Adristyrannus (16.9%, box=[21.8, 38.2, 1068.0, 1493.3])"
+      ],
+      "latency_ms": 374.7,
+      "status": "detected"
+    },
+    {
+      "file": "pest_corn_borer.jpg",
+      "expected_pest": "corn borer",
+      "total_detected": 1,
+      "detections": [
+        "corn borer (88.6%, box=[118.7, 101.4, 510.5, 508.8])"
+      ],
+      "latency_ms": 313.0,
+      "status": "detected"
+    },
+    {
+      "file": "pest_mole_cricket.jpg",
+      "expected_pest": "mole cricket",
+      "total_detected": 0,
+      "detections": [],
+      "latency_ms": 611.7,
+      "status": "no_pests_found"
+    },
+    {
+      "file": "pest_red_spider.jpg",
+      "expected_pest": "red spider",
+      "total_detected": 6,
+      "detections": [
+        "Panonchus citri McGregor (46.2%, box=[198.9, 224.6, 274.5, 285.5])",
+        "Panonchus citri McGregor (42.8%, box=[472.7, 130.5, 516.0, 184.7])",
+        "Unaspis yanonensis (34.9%, box=[82.7, 14.1, 134.6, 50.6])",
+        "Panonchus citri McGregor (30.5%, box=[82.5, 10.4, 154.1, 65.2])",
+        "Unaspis yanonensis (24.4%, box=[477.5, 206.2, 514.4, 239.6])",
+        "Unaspis yanonensis (15.1%, box=[206.4, 238.8, 239.6, 263.7])"
+      ],
+      "latency_ms": 445.1,
+      "status": "detected"
+    }
+  ],
+  "gatekeeper_controls": [
+    {
+      "file": "person_test.jpg",
+      "description": "Human portrait (Non-Crop)",
+      "is_crop": false,
+      "gatekeeper_rejected": true,
+      "confidence_pct": 100.0,
+      "condition": "No Crop Detected",
+      "latency_ms": 1391.5
+    },
+    {
+      "file": "control_soil_background.jpg",
+      "description": "Bare furrowed soil",
+      "is_crop": true,
+      "gatekeeper_rejected": false,
+      "confidence_pct": 4.8,
+      "condition": "Black Rot (Leaf Spot & Berry Rot)",
+      "latency_ms": 2117.2
+    }
+  ]
+}

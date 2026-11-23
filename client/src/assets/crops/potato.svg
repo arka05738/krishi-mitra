@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="potatoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAB308" />
+      <stop offset="50%" stop-color="#CA8A04" />
+      <stop offset="100%" stop-color="#854D0E" />
+    </linearGradient>
+    <linearGradient id="potatoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E62" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#potatoBlue)" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M22 24 C28 20 40 22 46 28 C52 34 50 44 42 48 C34 52 24 50 18 44 C12 38 16 28 22 24 Z" fill="url(#potatoGold)" stroke="#FEF08A" stroke-width="1"/>
+  <circle cx="26" cy="30" r="1.5" fill="#0B192C" opacity="0.7"/>
+  <circle cx="38" cy="32" r="1.5" fill="#0B192C" opacity="0.7"/>
+  <circle cx="32" cy="42" r="1.5" fill="#0B192C" opacity="0.7"/>
+  <circle cx="42" cy="40" r="1.2" fill="#0B192C" opacity="0.7"/>
+  <circle cx="23" cy="39" r="1.2" fill="#0B192C" opacity="0.7"/>
+  <path d="M45 27 C48 24 49 22 51 23" stroke="#FEF08A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+</svg>

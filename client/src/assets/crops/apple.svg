@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="appleRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F87171" />
+      <stop offset="60%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+    <linearGradient id="appleBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E62" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#appleBlue)" stroke="#D4AF37" stroke-width="1.5"/>
+  <path d="M32 23 C28 20 18 20 16 32 C14 43 24 53 32 53 C40 53 50 43 48 32 C46 20 36 20 32 23 Z" fill="url(#appleRed)" stroke="#F59E0B" stroke-width="1"/>
+  <ellipse cx="24" cy="31" rx="4" ry="2.5" transform="rotate(-30 24 31)" fill="#FFFFFF" opacity="0.45"/>
+  <path d="M32 23 C32 17 35 13 38 11" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M34 16 C40 14 44 17 44 17 C44 17 43 22 36 21 Z" fill="#D4AF37" stroke="#FFFFFF" stroke-width="0.5"/>
+</svg>

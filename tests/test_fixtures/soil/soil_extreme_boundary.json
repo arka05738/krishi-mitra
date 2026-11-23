@@ -1,0 +1,16 @@
+{
+  "crop": "rice",
+  "target_yield": 3.0,
+  "ph": 2.5,
+  "electrical_conductivity": 12.0,
+  "organic_carbon": 0.05,
+  "nitrogen": -10.0,
+  "phosphorus": 0.0,
+  "potassium": 0.0,
+  "area_acres": -2.0,
+  "zinc": 0.0,
+  "iron": 0.0,
+  "copper": 0.0,
+  "manganese": 0.0,
+  "boron": 0.0
+}

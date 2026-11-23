@@ -1,0 +1,16 @@
+{
+  "crop": "wheat",
+  "target_yield": 4.0,
+  "ph": 8.9,
+  "electrical_conductivity": 4.5,
+  "organic_carbon": 0.28,
+  "nitrogen": 160.0,
+  "phosphorus": 18.0,
+  "potassium": 290.0,
+  "area_acres": 2.0,
+  "zinc": 0.3,
+  "iron": 4.5,
+  "copper": 0.4,
+  "manganese": 3.0,
+  "boron": 0.8
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="cottonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E62" />
+      <stop offset="100%" stop-color="#0B192C" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#cottonBlue)" stroke="#D4AF37" stroke-width="1.5"/>
+  <circle cx="32" cy="26" r="9" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="24" cy="33" r="8.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="40" cy="33" r="8.5" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <circle cx="32" cy="37" r="8.5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <path d="M18 36 C22 41 28 44 32 46 C36 44 42 41 46 36" stroke="#D4AF37" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M32 46 L32 54" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M32 43 L26 36 M32 43 L38 36 M32 43 L32 34" stroke="#CA8A04" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

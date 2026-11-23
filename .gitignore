@@ -1,0 +1,66 @@
+# ==============================================================================
+# Krishi Mitra: Comprehensive .gitignore Specification
+# ==============================================================================
+
+# --- Secrets and Environment Files ---
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+!client/.env.example
+
+# --- Python Virtual Environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Node.js & Frontend Build Outputs ---
+node_modules/
+client/node_modules/
+client/dist/
+dist/
+dist-ssr/
+*.local
+
+# --- Large Model Binaries (> 100 MB GitHub limit) ---
+# Quantized Llama GGUF (771 MB - download via llama/download_llama.py)
+*.gguf
+llama/models/Llama-3.2-1B-Instruct/*.gguf
+llama/executorch/exported_models/*.pte
+
+# --- Compressed Archives & Backup Zips ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+ARM AAA-20261118T161422Z-1-001.zip
+
+# --- Bytecode, Caching, and Test Artifacts ---
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.oxlintrc.json.cache
+
+# --- OS & Editor Specific ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Audio Temporary Files ---
+server/app/static/audio/
+*.tmp
