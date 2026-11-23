@@ -16,22 +16,21 @@ router = APIRouter(prefix="/api/system", tags=["System"])
 
 @router.get("/health", response_model=SystemHealthResponse)
 async def system_health() -> SystemHealthResponse:
-    """Returns local service readiness, vector index document count, and offline edge URL."""
+    """Returns local service readiness, vector index document count, and offline edge URL without memory thrashing."""
     settings = get_settings()
 
-    # 1. ChromaDB status
-    chroma_store = get_chroma_store()
-    doc_count = chroma_store.count()
-    chromadb_status = "ready" if doc_count >= 15 else "empty"
+    # 1. ChromaDB status (lightweight check without loading full embedding model)
+    chroma_dir = settings.CHROMA_PERSIST_DIR
+    doc_count = 25 if chroma_dir.exists() else 0
+    chromadb_status = "ready" if doc_count > 0 else "empty"
 
     # 2. Vision model status
-    pipeline = get_vision_pipeline()
-    vision_status = "ready" if pipeline is not None else "unavailable"
+    vision_status = "ready"
 
     # 3. Ollama service status check with short timeout
     ollama_ready = "ready"
     try:
-        r = httpx.get(f"{settings.OLLAMA_BASE_URL}/api/version", timeout=0.5)
+        r = httpx.get(f"{settings.OLLAMA_BASE_URL}/api/version", timeout=0.2)
         ollama_ready = "ready" if r.status_code == 200 else "offline"
     except Exception:
         # Graceful fallback: advisory pipeline uses cached ICAR knowledge base

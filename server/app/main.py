@@ -38,20 +38,24 @@ async def lifespan(app: FastAPI):
     print(f"  Workers    : {settings.WORKERS}")
     print("=" * 65)
 
-    # 1. Warm-up vision pipeline
-    try:
-        pipeline = get_vision_pipeline()
-        print(f"[Startup] Vision Pipeline initialized on device: {pipeline.device}")
-    except Exception as e:
-        print(f"[Startup Warning] Vision Pipeline preloading error: {e}")
+    is_render = os.getenv("RENDER") is not None
+    if is_render:
+        print("[Startup] Cloud container environment detected: ML pipelines set to on-demand lazy loading.")
+    else:
+        # 1. Warm-up vision pipeline
+        try:
+            pipeline = get_vision_pipeline()
+            print(f"[Startup] Vision Pipeline initialized on device: {pipeline.device}")
+        except Exception as e:
+            print(f"[Startup Warning] Vision Pipeline preloading error: {e}")
 
-    # 2. Warm-up ChromaStore vector database
-    try:
-        store = get_chroma_store()
-        doc_count = store.count()
-        print(f"[Startup] ChromaDB Vector Store online: {doc_count} knowledge chunks indexed")
-    except Exception as e:
-        print(f"[Startup Warning] ChromaDB initialization error: {e}")
+        # 2. Warm-up ChromaStore vector database
+        try:
+            store = get_chroma_store()
+            doc_count = store.count()
+            print(f"[Startup] ChromaDB Vector Store online: {doc_count} knowledge chunks indexed")
+        except Exception as e:
+            print(f"[Startup Warning] ChromaDB initialization error: {e}")
 
     yield
 

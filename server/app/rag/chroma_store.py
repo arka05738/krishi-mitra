@@ -16,17 +16,24 @@ os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 
 class LocalMiniLMEmbeddingFunction(EmbeddingFunction):
-    """Offline embedding function wrapping sentence-transformers/all-MiniLM-L6-v2 with resilient fallback."""
+    """Offline embedding function wrapping sentence-transformers/all-MiniLM-L6-v2 with lazy loading and resilient fallback."""
 
     def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
-        is_offline = os.environ.get("HF_HUB_OFFLINE", "1") == "1"
-        try:
-            self.model = SentenceTransformer(model_name, local_files_only=is_offline)
-        except Exception:
+        self.model_name = model_name
+        self._model = None
+
+    @property
+    def model(self):
+        if self._model is None:
+            is_offline = os.environ.get("HF_HUB_OFFLINE", "1") == "1"
             try:
-                self.model = SentenceTransformer(model_name, local_files_only=False)
+                self._model = SentenceTransformer(self.model_name, local_files_only=is_offline)
             except Exception:
-                self.model = None
+                try:
+                    self._model = SentenceTransformer(self.model_name, local_files_only=False)
+                except Exception:
+                    self._model = None
+        return self._model
 
     def name(self) -> str:
         return "LocalMiniLMEmbeddingFunction"
