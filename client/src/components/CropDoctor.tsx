@@ -52,6 +52,7 @@ import {
   analyzePestSampleImage,
   reLocalizeCropResult,
   reLocalizePestResult,
+  API_BASE,
 } from '../services/api.ts';
 import type { PestDetectionResponse } from '../services/api.ts';
 import type { LanguageCode } from '../i18n/translations.ts';
@@ -367,10 +368,12 @@ export function CropDoctor({ onConsultAdvisor, language = 'en' }: CropDoctorProp
     }
   };
 
+  const formatSampleUrl = (url: string) => (url.startsWith('http') ? url : `${API_BASE}${url}`);
+
   const handleSelectSample = async (sample: SampleImageInfo) => {
     setAnalyzing(true);
     setError(null);
-    setPreviewUrl(sample.url);
+    setPreviewUrl(formatSampleUrl(sample.url));
     setSelectedFile(null);
     setActiveSample(sample);
     setCropHint(sample.crop);
@@ -387,7 +390,7 @@ export function CropDoctor({ onConsultAdvisor, language = 'en' }: CropDoctorProp
   const handleSelectPestSample = async (sample: SampleImageInfo) => {
     setAnalyzing(true);
     setError(null);
-    setPreviewUrl(sample.url);
+    setPreviewUrl(formatSampleUrl(sample.url));
     setSelectedFile(null);
     setActiveSample(sample);
     try {
@@ -959,7 +962,7 @@ export function CropDoctor({ onConsultAdvisor, language = 'en' }: CropDoctorProp
                     onClick={() => (scanMode === 'pest' ? handleSelectPestSample(sample) : handleSelectSample(sample))}
                   >
                     <div className="sample-thumb-wrapper">
-                      <img src={sample.url} alt={sample.name} className="sample-thumb" />
+                      <img src={formatSampleUrl(sample.url)} alt={sample.name} className="sample-thumb" />
                     </div>
                     <div className="sample-meta">
                       <span className="sample-crop-name">{sample.crop}</span>

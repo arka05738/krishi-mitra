@@ -13,8 +13,8 @@ import type {
   SystemHealthResponse,
 } from '../types/index.ts';
 
-// Relative base URL ensures seamless communication whether accessed locally or from Raspberry Pi 5
-const API_BASE = '';
+// Base URL dynamically configured via environment variable (or relative for local hotspot)
+export const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/+$/, '');
 
 /**
  * Standard error formatter stripping technical details into farmer-friendly guidance.

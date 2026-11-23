@@ -19,7 +19,7 @@ import {
 } from 'react-icons/fi';
 import { FaFlask } from 'react-icons/fa6';
 import type { SoilReportInput, SoilReportOutput } from '../types/index.ts';
-import { calculateSoilReport } from '../services/api.ts';
+import { calculateSoilReport, API_BASE } from '../services/api.ts';
 import type { LanguageCode } from '../i18n/translations.ts';
 import { getTranslation } from '../i18n/translations.ts';
 
@@ -168,7 +168,7 @@ export function SoilCard({ language = 'en' }: SoilCardProps) {
   const [extensionLogs, setExtensionLogs] = useState<ExtensionLogItem[]>([]);
 
   useEffect(() => {
-    fetch(`/api/advisory/regional-guide?region_id=${encodeURIComponent(selectedRegionId)}&crop=${encodeURIComponent(formData.crop)}`)
+    fetch(`${API_BASE}/api/advisory/regional-guide?region_id=${encodeURIComponent(selectedRegionId)}&crop=${encodeURIComponent(formData.crop)}`)
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data) setRegionalGuide(data);
