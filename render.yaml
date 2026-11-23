@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: krishi-mitra-backend
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install --upgrade pip && pip install --extra-index-url https://download.pytorch.org/whl/cpu torch torchvision && pip install -r requirements.txt
+    startCommand: uvicorn server.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/system/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: HOST
+        value: 0.0.0.0
+      - key: HF_HUB_OFFLINE
+        value: "0"
