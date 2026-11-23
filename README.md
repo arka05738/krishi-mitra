@@ -224,9 +224,6 @@ Evaluated under air-gapped laboratory conditions on a Raspberry Pi 5 (Quad-Core 
 │   │   └── schemas/                    # Pydantic v2 validation models
 │   └── chroma_db/                      # 122 indexed ICAR agronomic vectors in SQLite
 │
-├── SEVA_Challenge_Submission/          # Challenge documentation, reports, and visual proof
-│   ├── SEVA_FIRST_CHALLENGE_APPLICATION.md
-│   └── SEVA_Innovations_Challange.html
 └── tests/                              # Automated test suites (93 E2E tests + 84 unit tests)
     ├── e2e_offline_test.py             # Air-gap network isolation & system stress suite
     ├── test_vision.py                  # Vision gatekeeper & classifier regression tests
