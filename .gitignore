@@ -64,3 +64,7 @@ Thumbs.db
 # --- Audio Temporary Files ---
 server/app/static/audio/
 *.tmp
+
+# --- Local Workflow Scratch ---
+.github/
+
